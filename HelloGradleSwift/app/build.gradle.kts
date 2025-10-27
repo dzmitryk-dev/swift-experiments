@@ -14,5 +14,8 @@ plugins {
 // Set the target operating system and architecture for this application
 application {
     // Set the target operating system and architecture for this library
-    targetMachines.add(machines.macOS.architecture("aarch64"))
+    targetMachines.addAll(
+        machines.macOS.architecture("aarch64"),
+        machines.linux
+    )
 }
